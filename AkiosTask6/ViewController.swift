@@ -39,7 +39,8 @@ class ViewController: UIViewController {
     //Sliderと乱数を初期化
     func resetAllValue() {
         slider.value = 50
-        randomValue = Int(arc4random_uniform(99)) + 1
+        //範囲1~100（0~99 + 1）の乱数を出力
+        randomValue = Int(arc4random_uniform(100)) + 1
         themeValue.text = "\(self.randomValue ?? 50)"
     }
     
